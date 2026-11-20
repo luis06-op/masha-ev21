@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galería · Masha y el Oso</title>
+  <meta name="description" content="27 imágenes de Masha, el Oso y sus amigos del bosque en un visor accesible.">
+  <meta name="author" content="Luis Ángel Muñoz Márquez">
+  <meta name="theme-color" content="#d81b60">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://masha-ev21.vercel.app/galeria.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Masha y el Oso · Fan Site">
+  <meta property="og:title" content="Galería · Masha y el Oso">
+  <meta property="og:description" content="27 imágenes de Masha, el Oso y sus amigos del bosque en un visor accesible.">
+  <meta property="og:image" content="https://masha-ev21.vercel.app/assets/img/og/portada.jpg">
+  <meta property="og:url" content="https://masha-ev21.vercel.app/galeria.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icono-192.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/vendor/fuentes/fuentes.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body data-pagina="galeria">
+<a class="enlace-saltar" href="#contenido">Saltar al contenido principal</a>
+<nav class="navbar navbar-expand-lg navbar-masha sticky-top" aria-label="Navegación principal">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="assets/img/marca/logo-m.webp" alt="" width="46" height="46" class="marca-logo">
+      <span class="marca-texto">Masha <span class="marca-y">y</span> el Oso</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="personajes.html">Personajes</a></li>
+        <li class="nav-item"><a class="nav-link" href="episodios.html">Episodios</a></li>
+        <li class="nav-item"><a class="nav-link active" href="galeria.html" aria-current="page">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="d-flex flex-column flex-lg-row gap-2">
+        <a class="btn btn-masha btn-sm px-3" href="contacto.html">
+          <i class="bi bi-envelope-heart me-1" aria-hidden="true"></i>Escríbenos
+        </a>
+        <a class="btn btn-outline-secondary btn-sm px-3" href="admin.html">
+          <i class="bi bi-shield-lock me-1" aria-hidden="true"></i>Panel
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="contenido">
+<!-- ============================================================
+     CABECERA
+============================================================= -->
+<section class="seccion--rosa py-5" aria-labelledby="titulo-pagina">
+  <div class="container py-lg-3">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <nav aria-label="Ruta de navegación">
+          <ol class="breadcrumb small mb-3">
+            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Galería</li>
+          </ol>
+        </nav>
+        <span class="etiqueta-seccion">
+          <i class="bi bi-camera-fill" aria-hidden="true"></i>Álbum del bosque
+        </span>
+        <h1 id="titulo-pagina" class="display-4 fw-bold mb-3 texto-equilibrado">
+          Galería de <span class="texto-destacado">Masha y el Oso</span>
+        </h1>
+        <p class="lead text-muted mb-0" style="max-width: 46rem;">
+          Veintisiete ilustraciones para recorrer el bosque con calma. Filtra por
+          personaje y abre cualquier imagen en el visor: también funciona con el teclado.
+        </p>
+      </div>
+      <div class="col-lg-4 text-center d-none d-lg-block">
+        <img src="assets/img/hero/masha-hola.webp" alt="Masha saluda con la mano"
+             class="img-fluid" style="max-height: 300px;" width="250" height="450">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FILTROS + CUADRÍCULA
+============================================================= -->
+<section class="seccion pt-4" aria-labelledby="galeria-titulo">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
+      <div>
+        <span class="etiqueta-seccion">
+          <i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i>Momentos capturados
+        </span>
+        <h2 id="galeria-titulo" class="h3 mb-0">Todas las imágenes</h2>
+      </div>
+      <div class="filtros" id="filtrosGaleria" role="group" aria-label="Filtrar imágenes por categoría"></div>
+    </div>
+
+    <p class="small text-muted mb-4" id="contadorGaleria" aria-live="polite">Cargando imágenes…</p>
+
+    <div id="listaGaleria" class="row g-3 g-lg-4" aria-busy="true">
+      <div class="col-6 col-md-4 col-lg-3"><div class="skeleton ratio ratio-1x1"></div></div>
+      <div class="col-6 col-md-4 col-lg-3"><div class="skeleton ratio ratio-1x1"></div></div>
+      <div class="col-6 col-md-4 col-lg-3"><div class="skeleton ratio ratio-1x1"></div></div>
+      <div class="col-6 col-md-4 col-lg-3"><div class="skeleton ratio ratio-1x1"></div></div>
+    </div>
+
+    <div class="text-center mt-5 revelar">
+      <p class="text-muted mb-3">¿Te gustó alguna imagen? Cuéntanos cuál es tu favorita.</p>
+      <a class="btn btn-masha px-4" href="contacto.html">
+        <i class="bi bi-chat-heart me-2" aria-hidden="true"></i>Escribir al bosque
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VISOR (LIGHTBOX) CON NAVEGACIÓN
+============================================================= -->
+<div class="modal fade" id="modalGaleria" tabindex="-1" aria-labelledby="tituloVisor" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content border-0 visor-fondo text-white overflow-hidden">
+      <div class="modal-header border-0">
+        <h2 class="modal-title fs-6" id="tituloVisor">Galería</h2>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar visor"></button>
+      </div>
+      <div class="modal-body text-center pt-0">
+        <img id="visorImagen" src="" alt="" class="visor-imagen">
+        <p id="visorTexto" class="text-white-50 mt-3 mb-0 small"></p>
+
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+          <button type="button" class="btn btn-outline-light btn-sm rounded-circle" id="visorAnterior"
+                  aria-label="Imagen anterior">
+            <i class="bi bi-chevron-left" aria-hidden="true"></i>
+          </button>
+          <span class="small text-white-50" id="visorContador" aria-live="polite">0 / 0</span>
+          <button type="button" class="btn btn-outline-light btn-sm rounded-circle" id="visorSiguiente"
+                  aria-label="Imagen siguiente">
+            <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+<footer class="footer-masha pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img src="assets/img/marca/logo-m.webp" alt="Logotipo de Masha y el Oso" class="footer-marca" width="54" height="54">
+          <div>
+            <p class="mb-0 fw-bold text-white fs-5">Masha y el Oso</p>
+            <p class="mb-0 small text-white-50">Fan site educativo · Evidencia 21</p>
+          </div>
+        </div>
+        <p class="small mb-3">
+          Sitio sin ánimo de lucro creado como práctica del programa
+          <strong>Técnico en Programación de Software</strong> del SENA.
+          Masha y el Oso son marcas de sus respectivos titulares.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge rounded-pill text-bg-light">HTML5</span>
+          <span class="badge rounded-pill text-bg-light">CSS3</span>
+          <span class="badge rounded-pill text-bg-light">Bootstrap 5.3.8</span>
+          <span class="badge rounded-pill text-bg-light">JavaScript</span>
+          <span class="badge rounded-pill text-bg-light">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h2 class="mb-3">Navegación</h2>
+        <ul class="list-unstyled small mb-0">
+          <li class="mb-2"><a href="index.html">Inicio</a></li>
+          <li class="mb-2"><a href="personajes.html">Personajes</a></li>
+          <li class="mb-2"><a href="episodios.html">Episodios</a></li>
+          <li class="mb-2"><a href="galeria.html">Galería</a></li>
+          <li class="mb-2"><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h2 class="mb-3">El proyecto</h2>
+        <ul class="list-unstyled small mb-0">
+          <li class="mb-2"><a href="https://github.com/luis06-op/masha-ev21" rel="noopener noreferrer" target="_blank">Código en GitHub</a></li>
+          <li class="mb-2"><a href="https://vercel.com" rel="noopener noreferrer" target="_blank">Despliegue en Vercel</a></li>
+          <li class="mb-2"><a href="admin.html">Panel de mensajes</a></li>
+          <li class="mb-2"><a href="contacto.html#terminos">Términos y uso</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h2 class="mb-3">Sígueme el paso</h2>
+        <p class="small mb-3">
+          Un proyecto de <strong>Luis Ángel Muñoz Márquez</strong>,
+          ficha 3412544, instructor Farley González.
+        </p>
+        <div class="d-flex gap-2">
+          <a class="footer-social" href="https://github.com/luis06-op" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub del autor">
+            <i class="bi bi-github" aria-hidden="true"></i>
+          </a>
+          <a class="footer-social" href="https://www.youtube.com/@MashaandtheBear" target="_blank" rel="noopener noreferrer" aria-label="Canal oficial de Masha y el Oso en YouTube">
+            <i class="bi bi-youtube" aria-hidden="true"></i>
+          </a>
+          <a class="footer-social" href="contacto.html" aria-label="Ir al formulario de contacto">
+            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-light border-opacity-10 my-4">
+
+    <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small text-white-50">
+      <p class="mb-0">© <span data-anio>2026</span> Masha y el Oso · Fan site educativo. Sin afiliación oficial.</p>
+      <p class="mb-0">Evidencia 21 · Desarrollo de aplicativo Bootstrap · SENA</p>
+    </div>
+  </div>
+</footer>
+
+<button id="btnArriba" class="btn-arriba" type="button" aria-label="Volver al inicio de la página" title="Volver arriba">
+  <i class="bi bi-arrow-up-short fs-4" aria-hidden="true"></i>
+</button>
+
+<div id="contenedorAvisos" class="toast-container position-fixed bottom-0 end-0 p-3"
+     aria-live="polite" aria-atomic="true"></div>
+
+<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/componentes.js" defer></script>
+<script src="assets/js/galeria.js" defer></script>
+</body>
+</html>

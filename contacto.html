@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto · Masha y el Oso</title>
+  <meta name="description" content="Escríbenos: el formulario guarda tu mensaje en una base de datos PostgreSQL.">
+  <meta name="author" content="Luis Ángel Muñoz Márquez">
+  <meta name="theme-color" content="#d81b60">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://masha-ev21.vercel.app/contacto.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Masha y el Oso · Fan Site">
+  <meta property="og:title" content="Contacto · Masha y el Oso">
+  <meta property="og:description" content="Escríbenos: el formulario guarda tu mensaje en una base de datos PostgreSQL.">
+  <meta property="og:image" content="https://masha-ev21.vercel.app/assets/img/og/portada.jpg">
+  <meta property="og:url" content="https://masha-ev21.vercel.app/contacto.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icono-192.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/vendor/fuentes/fuentes.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body data-pagina="contacto">
+<a class="enlace-saltar" href="#contenido">Saltar al contenido principal</a>
+<nav class="navbar navbar-expand-lg navbar-masha sticky-top" aria-label="Navegación principal">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="assets/img/marca/logo-m.webp" alt="" width="46" height="46" class="marca-logo">
+      <span class="marca-texto">Masha <span class="marca-y">y</span> el Oso</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="personajes.html">Personajes</a></li>
+        <li class="nav-item"><a class="nav-link" href="episodios.html">Episodios</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+      <div class="d-flex flex-column flex-lg-row gap-2">
+        <a class="btn btn-masha btn-sm px-3" href="contacto.html">
+          <i class="bi bi-envelope-heart me-1" aria-hidden="true"></i>Escríbenos
+        </a>
+        <a class="btn btn-outline-secondary btn-sm px-3" href="admin.html">
+          <i class="bi bi-shield-lock me-1" aria-hidden="true"></i>Panel
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="contenido">
+<!-- ============================================================
+     CABECERA
+============================================================= -->
+<section class="seccion--rosa py-5" aria-labelledby="titulo-pagina">
+  <div class="container py-lg-3">
+    <nav aria-label="Ruta de navegación">
+      <ol class="breadcrumb small mb-3">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+      </ol>
+    </nav>
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <span class="etiqueta-seccion">
+          <i class="bi bi-envelope-heart-fill" aria-hidden="true"></i>Hablemos
+        </span>
+        <h1 id="titulo-pagina" class="display-4 fw-bold mb-3 texto-equilibrado">
+          Escríbenos al <span class="texto-destacado">bosque</span>
+        </h1>
+        <p class="lead text-muted mb-0" style="max-width: 46rem;">
+          Este formulario no es de mentira: al enviarlo, tu mensaje se guarda en una
+          base de datos <strong>PostgreSQL</strong> y aparece en el panel privado del sitio.
+        </p>
+      </div>
+      <div class="col-lg-4 text-center d-none d-lg-block">
+        <img src="assets/img/hero/masha-corazon.webp" alt="Masha sonríe con las manos juntas"
+             class="img-fluid" style="max-height: 280px;" width="260" height="440">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     INFORMACIÓN + FORMULARIO
+============================================================= -->
+<section class="seccion pt-4" aria-label="Formulario de contacto">
+  <div class="container">
+    <div class="row g-4 g-lg-5">
+
+      <div class="col-lg-5">
+        <div class="card border-0 rounded-4 overflow-hidden shadow-sm mb-4">
+          <img src="assets/img/hero/oso-abrazo.webp" alt="El Oso abraza a Masha"
+               class="card-img-top bg-light p-3" style="height: 230px; object-fit: contain;">
+          <div class="card-body p-4">
+            <h2 class="h4 mb-3">Un mensaje, tres pasos</h2>
+            <ol class="list-unstyled mb-0">
+              <li class="d-flex gap-3 mb-3">
+                <span class="badge rounded-pill text-bg-danger align-self-start">1</span>
+                <span class="small">Completas tus datos y escribes tu mensaje.</span>
+              </li>
+              <li class="d-flex gap-3 mb-3">
+                <span class="badge rounded-pill text-bg-danger align-self-start">2</span>
+                <span class="small">El servidor valida la información y la guarda en PostgreSQL.</span>
+              </li>
+              <li class="d-flex gap-3">
+                <span class="badge rounded-pill text-bg-danger align-self-start">3</span>
+                <span class="small">Recibes un folio de confirmación. ¡Y listo!</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="alert alert-light border d-flex gap-3 align-items-start" role="note">
+          <i class="bi bi-shield-lock-fill text-success fs-5" aria-hidden="true"></i>
+          <div class="small">
+            <strong>Tu privacidad importa.</strong> No usamos cookies de publicidad ni
+            compartimos tus datos. La IP se guarda como un hash, solo para evitar spam.
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <span class="cinta"><i class="bi bi-database-fill" aria-hidden="true"></i>PostgreSQL</span>
+          <span class="cinta"><i class="bi bi-cloud-check-fill" aria-hidden="true"></i>Neon</span>
+          <span class="cinta"><i class="bi bi-bootstrap-fill" aria-hidden="true"></i>Bootstrap 5</span>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="panel-formulario">
+          <div class="panel-formulario-cabecera text-center">
+            <img src="assets/img/hero/masha-hola.webp" alt="Masha te invita a escribir">
+            <p class="fw-bold mb-0 pb-2">¡Masha y el Oso quieren saber de ti!</p>
+          </div>
+
+          <div class="card-body p-4 p-md-5">
+            <div id="alertaFormulario" class="alert alert-danger d-none" role="alert" aria-live="assertive">
+              <p class="fw-bold mb-1">Revisa estos campos:</p>
+              <ul class="mb-0 small" id="listaErrores"></ul>
+            </div>
+
+            <form id="formContacto" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="nombre" class="form-label">
+                    Nombre <span class="text-danger" aria-hidden="true">*</span>
+                  </label>
+                  <input type="text" class="form-control" id="nombre" name="nombre"
+                         placeholder="Tu nombre" required minlength="2" maxlength="60"
+                         autocomplete="given-name" aria-describedby="ayudaNombre errorNombre">
+                  <div class="form-text" id="ayudaNombre">Solo letras y espacios.</div>
+                  <div class="invalid-feedback" id="errorNombre">Escribe tu nombre (mínimo 2 letras).</div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="apellido" class="form-label">
+                    Apellido <span class="text-danger" aria-hidden="true">*</span>
+                  </label>
+                  <input type="text" class="form-control" id="apellido" name="apellido"
+                         placeholder="Tu apellido" required minlength="2" maxlength="60"
+                         autocomplete="family-name">
+                  <div class="invalid-feedback">Escribe tu apellido.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="email" class="form-label">
+                    Correo electrónico <span class="text-danger" aria-hidden="true">*</span>
+                  </label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-white" aria-hidden="true">
+                      <i class="bi bi-envelope-fill text-danger"></i>
+                    </span>
+                    <input type="email" class="form-control" id="email" name="email"
+                           placeholder="correo@ejemplo.com" required maxlength="120"
+                           autocomplete="email" aria-describedby="ayudaEmail">
+                    <div class="invalid-feedback">Escribe un correo válido.</div>
+                  </div>
+                  <div class="form-text" id="ayudaEmail">Nunca lo publicaremos.</div>
+                </div>
+
+                <div class="col-sm-4">
+                  <label for="edad" class="form-label">Edad</label>
+                  <input type="number" class="form-control" id="edad" name="edad"
+                         placeholder="Opcional" min="3" max="120" inputmode="numeric">
+                  <div class="invalid-feedback">Entre 3 y 120 años.</div>
+                </div>
+
+                <div class="col-sm-8">
+                  <label for="personajeFavorito" class="form-label">
+                    Personaje favorito <span class="text-danger" aria-hidden="true">*</span>
+                  </label>
+                  <select class="form-select" id="personajeFavorito" name="personajeFavorito" required>
+                    <option value="" selected disabled>Cargando personajes…</option>
+                  </select>
+                  <div class="invalid-feedback">Selecciona un personaje.</div>
+                </div>
+
+                <div class="col-12">
+                  <fieldset>
+                    <legend class="form-label">¿Por qué nos escribes? <span class="text-danger" aria-hidden="true">*</span></legend>
+                    <div class="row g-2">
+                      <div class="col-sm-4">
+                        <label class="opcion-motivo" for="motivoFan">
+                          <input class="form-check-input mt-0" type="radio" name="motivo" id="motivoFan" value="fan" checked>
+                          <span><i class="bi bi-heart-fill text-danger me-1" aria-hidden="true"></i>Soy fan</span>
+                        </label>
+                      </div>
+                      <div class="col-sm-4">
+                        <label class="opcion-motivo" for="motivoSugerencia">
+                          <input class="form-check-input mt-0" type="radio" name="motivo" id="motivoSugerencia" value="sugerencia">
+                          <span><i class="bi bi-lightbulb-fill text-warning me-1" aria-hidden="true"></i>Sugerencia</span>
+                        </label>
+                      </div>
+                      <div class="col-sm-4">
+                        <label class="opcion-motivo" for="motivoColaboracion">
+                          <input class="form-check-input mt-0" type="radio" name="motivo" id="motivoColaboracion" value="colaboracion">
+                          <span><i class="bi bi-people-fill text-success me-1" aria-hidden="true"></i>Colaboración</span>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="col-12">
+                  <fieldset>
+                    <legend class="form-label">Me interesa recibir</legend>
+                    <div class="d-flex flex-wrap gap-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="intereses" id="interesNoticias" value="noticias">
+                        <label class="form-check-label" for="interesNoticias">Noticias</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="intereses" id="interesEstrenos" value="estrenos">
+                        <label class="form-check-label" for="interesEstrenos">Estrenos</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="intereses" id="interesSorteos" value="sorteos">
+                        <label class="form-check-label" for="interesSorteos">Sorteos</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="col-12">
+                  <label for="mensaje" class="form-label">
+                    Mensaje <span class="text-danger" aria-hidden="true">*</span>
+                  </label>
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required
+                            minlength="10" maxlength="800"
+                            placeholder="Cuéntanos qué te gustaría ver en el sitio…"
+                            aria-describedby="ayudaMensaje"></textarea>
+                  <div class="invalid-feedback">El mensaje debe tener entre 10 y 800 caracteres.</div>
+                  <div class="form-text d-flex justify-content-between" id="ayudaMensaje">
+                    <span>Mínimo 10 caracteres.</span>
+                    <span><span class="contador-caracteres" id="contadorMensaje">0</span> / 800</span>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="terminos" name="terminos" required>
+                    <label class="form-check-label" for="terminos">
+                      Acepto los <a href="#" data-bs-toggle="modal" data-bs-target="#modalTerminos">términos y el uso educativo</a>
+                      de mis datos <span class="text-danger" aria-hidden="true">*</span>
+                    </label>
+                    <div class="invalid-feedback">Debes aceptar los términos para continuar.</div>
+                  </div>
+                </div>
+
+                <!-- Campo trampa para bots: invisible para las personas -->
+                <div class="d-none" aria-hidden="true">
+                  <label for="sitioWeb">No rellenar este campo</label>
+                  <input type="text" id="sitioWeb" name="sitioWeb" tabindex="-1" autocomplete="off">
+                </div>
+
+                <div class="col-12 d-grid">
+                  <button type="submit" class="btn btn-masha btn-lg" id="btnEnviar">
+                    <i class="bi bi-send-fill me-2" aria-hidden="true"></i>Enviar mensaje
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MODAL DE ÉXITO
+============================================================= -->
+<div class="modal fade" id="modalExito" tabindex="-1" aria-labelledby="tituloExito" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg text-center overflow-hidden">
+      <div class="modal-header bg-success text-white border-0">
+        <h2 class="modal-title h5 w-100" id="tituloExito">
+          <i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i>¡Mensaje guardado!
+        </h2>
+      </div>
+      <div class="modal-body py-4 px-4">
+        <img src="assets/img/hero/masha-hola.webp" alt="Masha celebra el envío"
+             style="height: 150px; object-fit: contain;" class="mb-2">
+        <p class="mb-2" id="textoExito">Gracias por escribirnos. Tu mensaje ya está en la base de datos.</p>
+        <p class="small text-muted mb-0">
+          Folio de tu mensaje: <strong id="folioMensaje">—</strong>
+        </p>
+      </div>
+      <div class="modal-footer border-0 justify-content-center pb-4">
+        <button type="button" class="btn btn-contorno" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-masha px-4" data-bs-dismiss="modal">
+          <i class="bi bi-heart-fill me-1" aria-hidden="true"></i>¡Genial!
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     MODAL DE TÉRMINOS
+============================================================= -->
+<div class="modal fade" id="modalTerminos" tabindex="-1" aria-labelledby="tituloTerminos" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content border-0 shadow-lg">
+      <div class="modal-header">
+        <h2 class="modal-title h5" id="tituloTerminos">Términos y uso educativo</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar términos"></button>
+      </div>
+      <div class="modal-body small">
+        <p>
+          Este sitio es un <strong>trabajo académico</strong> de la Evidencia 21 del programa
+          Técnico en Programación de Software del SENA. No tiene relación oficial con
+          Animaccord Animation Studio ni con los titulares de Masha y el Oso.
+        </p>
+        <p>
+          Los datos que envías (nombre, apellido, correo, edad, personaje favorito, motivo,
+          intereses y mensaje) se almacenan en una base de datos PostgreSQL con fines
+          exclusivamente demostrativos. No se usan para publicidad ni se comparten con terceros.
+        </p>
+        <p class="mb-0">
+          Puedes solicitar la eliminación de tu mensaje escribiendo de nuevo al formulario
+          e indicándolo en el texto. El autor del sitio eliminará el registro del panel.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-masha btn-sm" data-bs-dismiss="modal">Entendido</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+<footer class="footer-masha pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img src="assets/img/marca/logo-m.webp" alt="Logotipo de Masha y el Oso" class="footer-marca" width="54" height="54">
+          <div>
+            <p class="mb-0 fw-bold text-white fs-5">Masha y el Oso</p>
+            <p class="mb-0 small text-white-50">Fan site educativo · Evidencia 21</p>
+          </div>
+        </div>
+        <p class="small mb-3">
+          Sitio sin ánimo de lucro creado como práctica del programa
+          <strong>Técnico en Programación de Software</strong> del SENA.
+          Masha y el Oso son marcas de sus respectivos titulares.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge rounded-pill text-bg-light">HTML5</span>
+          <span class="badge rounded-pill text-bg-light">CSS3</span>
+          <span class="badge rounded-pill text-bg-light">Bootstrap 5.3.8</span>
+          <span class="badge rounded-pill text-bg-light">JavaScript</span>
+          <span class="badge rounded-pill text-bg-light">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h2 class="mb-3">Navegación</h2>
+        <ul class="list-unstyled small mb-0">
+          <li class="mb-2"><a href="index.html">Inicio</a></li>
+          <li class="mb-2"><a href="personajes.html">Personajes</a></li>
+          <li class="mb-2"><a href="episodios.html">Episodios</a></li>
+          <li class="mb-2"><a href="galeria.html">Galería</a></li>
+          <li class="mb-2"><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h2 class="mb-3">El proyecto</h2>
+        <ul class="list-unstyled small mb-0">
+          <li class="mb-2"><a href="https://github.com/luis06-op/masha-ev21" rel="noopener noreferrer" target="_blank">Código en GitHub</a></li>
+          <li class="mb-2"><a href="https://vercel.com" rel="noopener noreferrer" target="_blank">Despliegue en Vercel</a></li>
+          <li class="mb-2"><a href="admin.html">Panel de mensajes</a></li>
+          <li class="mb-2"><a href="contacto.html#terminos">Términos y uso</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h2 class="mb-3">Sígueme el paso</h2>
+        <p class="small mb-3">
+          Un proyecto de <strong>Luis Ángel Muñoz Márquez</strong>,
+          ficha 3412544, instructor Farley González.
+        </p>
+        <div class="d-flex gap-2">
+          <a class="footer-social" href="https://github.com/luis06-op" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub del autor">
+            <i class="bi bi-github" aria-hidden="true"></i>
+          </a>
+          <a class="footer-social" href="https://www.youtube.com/@MashaandtheBear" target="_blank" rel="noopener noreferrer" aria-label="Canal oficial de Masha y el Oso en YouTube">
+            <i class="bi bi-youtube" aria-hidden="true"></i>
+          </a>
+          <a class="footer-social" href="contacto.html" aria-label="Ir al formulario de contacto">
+            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-light border-opacity-10 my-4">
+
+    <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small text-white-50">
+      <p class="mb-0">© <span data-anio>2026</span> Masha y el Oso · Fan site educativo. Sin afiliación oficial.</p>
+      <p class="mb-0">Evidencia 21 · Desarrollo de aplicativo Bootstrap · SENA</p>
+    </div>
+  </div>
+</footer>
+
+<button id="btnArriba" class="btn-arriba" type="button" aria-label="Volver al inicio de la página" title="Volver arriba">
+  <i class="bi bi-arrow-up-short fs-4" aria-hidden="true"></i>
+</button>
+
+<div id="contenedorAvisos" class="toast-container position-fixed bottom-0 end-0 p-3"
+     aria-live="polite" aria-atomic="true"></div>
+
+<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/contacto.js" defer></script>
+</body>
+</html>

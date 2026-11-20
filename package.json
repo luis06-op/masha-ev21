@@ -1,0 +1,19 @@
+{
+  "name": "masha-ev21",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fan site de Masha y el Oso con Bootstrap 5 y PostgreSQL (Evidencia 21 - SENA)",
+  "author": "Luis Ángel Muñoz Márquez",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "db:init": "node scripts/init-db.mjs",
+    "db:datos": "node scripts/init-db.mjs --solo-datos"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.1"
+  }
+}

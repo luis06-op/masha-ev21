@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personajes · Masha y el Oso</title>
+  <meta name="description" content="Conoce a Masha, el Oso y los amigos del bosque. Fichas con historias, rasgos y frases de la serie.">
+  <meta name="author" content="Luis Ángel Muñoz Márquez">
+  <meta name="theme-color" content="#d81b60">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://masha-ev21.vercel.app/personajes.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Masha y el Oso · Fan Site">
+  <meta property="og:title" content="Personajes · Masha y el Oso">
+  <meta property="og:description" content="Conoce a Masha, el Oso y los amigos del bosque. Fichas con historias, rasgos y frases de la serie.">
+  <meta property="og:image" content="https://masha-ev21.vercel.app/assets/img/og/portada.jpg">
+  <meta property="og:url" content="https://masha-ev21.vercel.app/personajes.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icono-192.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/vendor/fuentes/fuentes.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body data-pagina="personajes">
+<a class="enlace-saltar" href="#contenido">Saltar al contenido principal</a>
+<nav class="navbar navbar-expand-lg navbar-masha sticky-top" aria-label="Navegación principal">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="assets/img/marca/logo-m.webp" alt="" width="46" height="46" class="marca-logo">
+      <span class="marca-texto">Masha <span class="marca-y">y</span> el Oso</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="personajes.html" aria-current="page">Personajes</a></li>
+        <li class="nav-item"><a class="nav-link" href="episodios.html">Episodios</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="d-flex flex-column flex-lg-row gap-2">
+        <a class="btn btn-masha btn-sm px-3" href="contacto.html">
+          <i class="bi bi-envelope-heart me-1" aria-hidden="true"></i>Escríbenos
+        </a>
+        <a class="btn btn-outline-secondary btn-sm px-3" href="admin.html">
+          <i class="bi bi-shield-lock me-1" aria-hidden="true"></i>Panel
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="contenido">
+<!-- ============================================================
+     CABECERA DE LA PÁGINA
+============================================================= -->
+<section class="seccion--rosa py-5" aria-labelledby="titulo-pagina">
+  <div class="container py-lg-3">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <nav aria-label="Ruta de navegación">
+          <ol class="breadcrumb small mb-3">
+            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Personajes</li>
+          </ol>
+        </nav>
+        <span class="etiqueta-seccion">
+          <i class="bi bi-people-fill" aria-hidden="true"></i>Elenco del bosque
+        </span>
+        <h1 id="titulo-pagina" class="display-4 fw-bold mb-3 texto-equilibrado">
+          Personajes de <span class="texto-destacado">Masha y el Oso</span>
+        </h1>
+        <p class="lead text-muted mb-0" style="max-width: 44rem;">
+          Cinco fichas para conocer a los habitantes del bosque: su historia, sus rasgos
+          y la frase que mejor los define. Toca una tarjeta para ver la ficha completa.
+        </p>
+      </div>
+      <div class="col-lg-4 text-center d-none d-lg-block">
+        <img src="assets/img/hero/oso-abrazo.webp" alt="El Oso abraza a Masha"
+             class="img-fluid" style="max-height: 300px;" width="320" height="380">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FILTROS Y BUSCADOR
+============================================================= -->
+<section class="seccion pt-4" aria-labelledby="lista-titulo">
+  <div class="container">
+    <div class="row g-3 align-items-end mb-4">
+      <div class="col-lg-5">
+        <label for="buscadorPersonajes" class="form-label">Buscar personaje</label>
+        <div class="input-group">
+          <span class="input-group-text bg-white" aria-hidden="true">
+            <i class="bi bi-search"></i>
+          </span>
+          <input type="search" class="form-control" id="buscadorPersonajes"
+                 placeholder="Escribe un nombre o un rasgo…" autocomplete="off">
+          <button class="btn btn-outline-secondary" type="button" id="limpiarBusqueda">
+            <i class="bi bi-x-lg" aria-hidden="true"></i><span class="visually-hidden">Limpiar búsqueda</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <span class="form-label d-block" id="etiquetaRoles">Filtrar por rol</span>
+        <div class="filtros" id="filtrosRol" role="group" aria-labelledby="etiquetaRoles"></div>
+      </div>
+
+      <div class="col-lg-2">
+        <label for="ordenPersonajes" class="form-label">Ordenar</label>
+        <select class="form-select" id="ordenPersonajes">
+          <option value="orden">Orden del bosque</option>
+          <option value="nombre">Nombre (A–Z)</option>
+          <option value="rol">Rol</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+      <h2 id="lista-titulo" class="h4 mb-0">Todos los personajes</h2>
+      <p class="mb-0 small text-muted" id="contadorPersonajes" aria-live="polite">Cargando…</p>
+    </div>
+
+    <div id="listaPersonajes" class="row g-4" aria-busy="true">
+      <div class="col-12 col-sm-6 col-lg-4"><div class="skeleton" style="height: 420px;"></div></div>
+      <div class="col-12 col-sm-6 col-lg-4"><div class="skeleton" style="height: 420px;"></div></div>
+      <div class="col-12 col-sm-6 col-lg-4"><div class="skeleton" style="height: 420px;"></div></div>
+    </div>
+
+    <div class="banner-serie p-4 p-lg-5 mt-5 revelar">
+      <div class="row align-items-center g-4">
+        <div class="col-8 col-md-3 text-center">
+          <img src="assets/img/hero/masha-hola.webp" alt="Masha saluda" class="banner-img img-fluid"
+               width="180" height="330" loading="lazy">
+        </div>
+        <div class="col-12 col-md-9">
+          <h2 class="h3 fw-bold mb-2">¿Con cuál te identificas?</h2>
+          <p class="mb-3 opacity-90">
+            Cuéntanoslo en el formulario. Tu personaje favorito queda registrado en la
+            base de datos y nos ayuda a preparar mejores contenidos.
+          </p>
+          <a class="btn btn-miel px-4" href="contacto.html">
+            <i class="bi bi-heart-fill me-2" aria-hidden="true"></i>Votar por mi favorito
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MODAL CON LA FICHA COMPLETA
+============================================================= -->
+<div class="modal fade" id="modalPersonaje" tabindex="-1" aria-labelledby="tituloPersonaje" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content border-0 shadow-lg overflow-hidden">
+      <div class="modal-header border-0 pb-0">
+        <h2 class="modal-title h5" id="tituloPersonaje">Personaje</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar ficha del personaje"></button>
+      </div>
+      <div class="modal-body pt-2">
+        <div class="row g-4">
+          <div class="col-md-5">
+            <figure class="personaje-figura rounded-4 mb-0" id="pjFigura" style="height: 300px;">
+              <span class="personaje-emoji" id="pjEmoji" aria-hidden="true">🐻</span>
+              <img id="pjImagen" src="" alt="" width="360" height="330">
+            </figure>
+          </div>
+          <div class="col-md-7">
+            <p class="personaje-rol mb-1" id="pjRol">Rol</p>
+            <p class="mb-3" id="pjDescripcion"></p>
+            <h3 class="h6 text-uppercase text-muted mb-2">Rasgos</h3>
+            <div class="d-flex flex-wrap gap-2 mb-3" id="pjRasgos"></div>
+            <dl class="row small mb-0">
+              <dt class="col-5">Primera aparición</dt>
+              <dd class="col-7" id="pjAparicion">—</dd>
+              <dt class="col-5">Frase</dt>
+              <dd class="col-7 fst-italic" id="pjFrase">—</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <a class="btn btn-contorno btn-sm" href="contacto.html">
+          <i class="bi bi-heart me-1" aria-hidden="true"></i>Es mi favorito
+        </a>
+        <button type="button" class="btn btn-masha btn-sm" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+<footer class="footer-masha pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img src="assets/img/marca/logo-m.webp" alt="Logotipo de Masha y el Oso" class="footer-marca" width="54" height="54">
+          <div>
+            <p class="mb-0 fw-bold text-white fs-5">Masha y el Oso</p>
+            <p class="mb-0 small text-white-50">Fan site educativo · Evidencia 21</p>
+          </div>
+        </div>
+        <p class="small mb-3">
+          Sitio sin ánimo de lucro creado como práctica del programa
+          <strong>Técnico en Programación de Software</strong> del SENA.
+          Masha y el Oso son marcas de sus respectivos titulares.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge rounded-pill text-bg-light">HTML5</span>
+          <span class="badge rounded-pill text-bg-light">CSS3</span>
+          <span class="badge rounded-pill text-bg-light">Bootstrap 5.3.8</span>
+          <span class="badge rounded-pill text-bg-light">JavaScript</span>
+          <span class="badge rounded-pill text-bg-light">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h2 class="mb-3">Navegación</h2>
+        <ul class="list-unstyled small mb-0">
+          <li class="mb-2"><a href="index.html">Inicio</a></li>
+          <li class="mb-2"><a href="personajes.html">Personajes</a></li>
+          <li class="mb-2"><a href="episodios.html">Episodios</a></li>
+          <li class="mb-2"><a href="galeria.html">Galería</a></li>
+          <li class="mb-2"><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h2 class="mb-3">El proyecto</h2>
+        <ul class="list-unstyled small mb-0">
+          <li class="mb-2"><a href="https://github.com/luis06-op/masha-ev21" rel="noopener noreferrer" target="_blank">Código en GitHub</a></li>
+          <li class="mb-2"><a href="https://vercel.com" rel="noopener noreferrer" target="_blank">Despliegue en Vercel</a></li>
+          <li class="mb-2"><a href="admin.html">Panel de mensajes</a></li>
+          <li class="mb-2"><a href="contacto.html#terminos">Términos y uso</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h2 class="mb-3">Sígueme el paso</h2>
+        <p class="small mb-3">
+          Un proyecto de <strong>Luis Ángel Muñoz Márquez</strong>,
+          ficha 3412544, instructor Farley González.
+        </p>
+        <div class="d-flex gap-2">
+          <a class="footer-social" href="https://github.com/luis06-op" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub del autor">
+            <i class="bi bi-github" aria-hidden="true"></i>
+          </a>
+          <a class="footer-social" href="https://www.youtube.com/@MashaandtheBear" target="_blank" rel="noopener noreferrer" aria-label="Canal oficial de Masha y el Oso en YouTube">
+            <i class="bi bi-youtube" aria-hidden="true"></i>
+          </a>
+          <a class="footer-social" href="contacto.html" aria-label="Ir al formulario de contacto">
+            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-light border-opacity-10 my-4">
+
+    <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small text-white-50">
+      <p class="mb-0">© <span data-anio>2026</span> Masha y el Oso · Fan site educativo. Sin afiliación oficial.</p>
+      <p class="mb-0">Evidencia 21 · Desarrollo de aplicativo Bootstrap · SENA</p>
+    </div>
+  </div>
+</footer>
+
+<button id="btnArriba" class="btn-arriba" type="button" aria-label="Volver al inicio de la página" title="Volver arriba">
+  <i class="bi bi-arrow-up-short fs-4" aria-hidden="true"></i>
+</button>
+
+<div id="contenedorAvisos" class="toast-container position-fixed bottom-0 end-0 p-3"
+     aria-live="polite" aria-atomic="true"></div>
+
+<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/componentes.js" defer></script>
+<script src="assets/js/personajes.js" defer></script>
+</body>
+</html>

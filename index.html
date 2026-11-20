@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio · Masha y el Oso</title>
+  <meta name="description" content="Fan site de Masha y el Oso: personajes, episodios, galería y contacto. Un aplicativo Bootstrap con base de datos PostgreSQL.">
+  <meta name="author" content="Luis Ángel Muñoz Márquez">
+  <meta name="theme-color" content="#d81b60">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://masha-ev21.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Masha y el Oso · Fan Site">
+  <meta property="og:title" content="Inicio · Masha y el Oso">
+  <meta property="og:description" content="Fan site de Masha y el Oso: personajes, episodios, galería y contacto. Un aplicativo Bootstrap con base de datos PostgreSQL.">
+  <meta property="og:image" content="https://masha-ev21.vercel.app/assets/img/og/portada.jpg">
+  <meta property="og:url" content="https://masha-ev21.vercel.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icono-192.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/vendor/fuentes/fuentes.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body data-pagina="inicio">
+<a class="enlace-saltar" href="#contenido">Saltar al contenido principal</a>
+<nav class="navbar navbar-expand-lg navbar-masha sticky-top" aria-label="Navegación principal">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="assets/img/marca/logo-m.webp" alt="" width="46" height="46" class="marca-logo">
+      <span class="marca-texto">Masha <span class="marca-y">y</span> el Oso</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="personajes.html">Personajes</a></li>
+        <li class="nav-item"><a class="nav-link" href="episodios.html">Episodios</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="d-flex flex-column flex-lg-row gap-2">
+        <a class="btn btn-masha btn-sm px-3" href="contacto.html">
+          <i class="bi bi-envelope-heart me-1" aria-hidden="true"></i>Escríbenos
+        </a>
+        <a class="btn btn-outline-secondary btn-sm px-3" href="admin.html">
+          <i class="bi bi-shield-lock me-1" aria-hidden="true"></i>Panel
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="contenido">
+<!-- ============================================================
+     PORTADA
+     Hero con las dos imágenes principales y accesos rápidos.
+============================================================= -->
+<section class="hero" aria-labelledby="hero-titulo">
+  <div class="container position-relative">
+    <div class="row align-items-center g-4 g-lg-5">
+      <div class="col-lg-6">
+        <span class="etiqueta-hero">
+          <i class="bi bi-stars" aria-hidden="true"></i>
+          Fan site educativo · Evidencia 21
+        </span>
+        <h1 id="hero-titulo" class="hero-titulo texto-equilibrado">
+          Una niña, un oso y <span class="texto-destacado">mil aventuras</span> en el bosque.
+        </h1>
+        <p class="hero-texto">
+          Bienvenido al rincón de los fans de <strong>Masha y el Oso</strong>. Aquí encuentras
+          las fichas de los personajes, los episodios más queridos y una galería para
+          perderte entre los árboles. Todo, con una base de datos de verdad.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-masha btn-lg px-4" href="personajes.html">
+            <i class="bi bi-people-fill me-2" aria-hidden="true"></i>Conoce al elenco
+          </a>
+          <a class="btn btn-contorno btn-lg px-4" href="episodios.html">
+            <i class="bi bi-play-circle me-2" aria-hidden="true"></i>Ver episodios
+          </a>
+        </div>
+        <ul class="hero-datos">
+          <li>
+            <i class="bi bi-emoji-smile" aria-hidden="true"></i>
+            <span><strong data-stat="personajes">5</strong> personajes</span>
+          </li>
+          <li>
+            <i class="bi bi-collection-play" aria-hidden="true"></i>
+            <span><strong data-stat="episodios">9</strong> episodios</span>
+          </li>
+          <li>
+            <i class="bi bi-images" aria-hidden="true"></i>
+            <span><strong data-stat="imagenes">27</strong> imágenes</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="hero-escena">
+          <div class="hero-mancha" aria-hidden="true"></div>
+          <img src="assets/img/hero/masha-hola.webp" alt="Masha saluda con la mano y sonríe"
+               class="hero-masha" width="330" height="600" fetchpriority="high">
+          <img src="assets/img/hero/oso-saluda.webp" alt="El Oso saluda levantando una pata"
+               class="hero-oso" width="390" height="430" fetchpriority="high">
+          <span class="burbuja burbuja-1"><i class="bi bi-heart-fill" aria-hidden="true"></i>Amistad</span>
+          <span class="burbuja burbuja-2"><i class="bi bi-star-fill" aria-hidden="true"></i>Fans felices</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-ola" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none" focusable="false">
+      <path d="M0,40 C240,90 360,0 720,30 C1080,60 1200,10 1440,40 L1440,90 L0,90 Z"
+            fill="#fff8f1"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- Cifras calculadas en la base de datos -->
+<section class="seccion-cifras" aria-label="Cifras del sitio">
+  <div class="container">
+    <div class="row g-3 g-lg-4">
+      <div class="col-6 col-lg-3">
+        <div class="stat-card revelar">
+          <span class="stat-icono"><i class="bi bi-people-fill" aria-hidden="true"></i></span>
+          <span class="stat-valor" data-stat="personajes">—</span>
+          <span class="stat-texto">Personajes</span>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-card revelar">
+          <span class="stat-icono"><i class="bi bi-collection-play-fill" aria-hidden="true"></i></span>
+          <span class="stat-valor" data-stat="episodios">—</span>
+          <span class="stat-texto">Episodios</span>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-card revelar">
+          <span class="stat-icono"><i class="bi bi-images" aria-hidden="true"></i></span>
+          <span class="stat-valor" data-stat="imagenes">—</span>
+          <span class="stat-texto">Imágenes</span>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-card revelar">
+          <span class="stat-icono"><i class="bi bi-star-fill" aria-hidden="true"></i></span>
+          <span class="stat-valor" data-stat="promedio">—</span>
+          <span class="stat-texto">Promedio de estrellas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PERSONAJES DESTACADOS (datos desde /api/personajes)
+============================================================= -->
+<section class="seccion" aria-labelledby="personajes-titulo">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+      <div>
+        <span class="etiqueta-seccion">
+          <i class="bi bi-tree-fill" aria-hidden="true"></i>Habitantes del bosque
+        </span>
+        <h2 id="personajes-titulo" class="titulo-seccion mb-0">Los que hacen la magia</h2>
+      </div>
+      <a class="btn btn-contorno" href="personajes.html">
+        Ver todos <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div id="personajesDestacados" class="row g-4" aria-live="polite" aria-busy="true">
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="skeleton" style="height: 420px;"></div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="skeleton" style="height: 420px;"></div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="skeleton" style="height: 420px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BANNER DE LA SERIE
+============================================================= -->
+<section class="py-4" aria-label="Promoción de la serie">
+  <div class="container">
+    <div class="banner-serie p-4 p-lg-5 revelar">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <p class="text-uppercase small fw-bold mb-2" style="letter-spacing:.18em; color:#ffe0a3;">
+            Desde 2009 · Animaccord
+          </p>
+          <h2 class="display-6 fw-bold mb-3 texto-equilibrado">
+            Dos amigos, cero aburrimiento.
+          </h2>
+          <p class="mb-4 opacity-90" style="max-width: 36rem;">
+            Una serie que se entiende sin palabras: humor visual, canciones pegajosas
+            y una amistad que atraviesa bosques, inviernos y pasteles quemados.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-miel btn-lg px-4" href="galeria.html">
+              <i class="bi bi-images me-2" aria-hidden="true"></i>Explorar la galería
+            </a>
+            <a class="btn btn-outline-light btn-lg px-4" href="contacto.html">
+              <i class="bi bi-envelope-heart me-2" aria-hidden="true"></i>Escríbenos
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img src="assets/img/marca/logo-ruso.webp" alt="Logotipo de Masha y el Oso en ruso"
+               class="banner-img img-fluid" width="420" height="390" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EPISODIOS DESTACADOS (datos desde /api/episodios)
+============================================================= -->
+<section class="seccion seccion--crema" aria-labelledby="episodios-titulo">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+      <div>
+        <span class="etiqueta-seccion">
+          <i class="bi bi-play-btn-fill" aria-hidden="true"></i>Para maratonear
+        </span>
+        <h2 id="episodios-titulo" class="titulo-seccion mb-0">Episodios favoritos</h2>
+      </div>
+      <a class="btn btn-contorno" href="episodios.html">
+        Ver todos <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div id="episodiosDestacados" class="row g-4" aria-live="polite" aria-busy="true">
+      <div class="col-12 col-md-4">
+        <div class="skeleton" style="height: 380px;"></div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="skeleton" style="height: 380px;"></div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="skeleton" style="height: 380px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VISTA PREVIA DE LA GALERÍA (datos desde /api/galeria)
+============================================================= -->
+<section class="seccion" aria-labelledby="galeria-titulo">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="etiqueta-seccion">
+        <i class="bi bi-camera-fill" aria-hidden="true"></i>Momentos del bosque
+      </span>
+      <h2 id="galeria-titulo" class="titulo-seccion">Un vistazo a la galería</h2>
+      <p class="subtitulo-seccion">
+        Seis de las 27 imágenes que puedes ampliar en la galería completa.
+      </p>
+      <div class="separador"></div>
+    </div>
+
+    <div id="galeriaDestacada" class="row g-3 g-lg-4" aria-live="polite" aria-busy="true">
+      <div class="col-6 col-md-4"><div class="skeleton ratio ratio-1x1"></div></div>
+      <div class="col-6 col-md-4"><div class="skeleton ratio ratio-1x1"></div></div>
+      <div class="col-6 col-md-4"><div class="skeleton ratio ratio-1x1"></div></div>
+      <div class="col-6 col-md-4"><div class="skeleton ratio ratio-1x1"></div></div>
+      <div class="col-6 col-md-4"><div class="skeleton ratio ratio-1x1"></div></div>
+      <div class="col-6 col-md-4"><div class="skeleton ratio ratio-1x1"></div></div>
+    </div>
+
+    <div class="text-center mt-4">
+      <a class="btn btn-masha px-4" href="galeria.html">
+        Abrir galería completa <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PREGUNTAS FRECUENTES
+============================================================= -->
+<section class="seccion seccion--rosa" id="faq" aria-labelledby="faq-titulo">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-4 text-center">
+        <img src="assets/img/hero/masha-corazon.webp" alt="Masha sonríe con las manos juntas"
+             class="img-fluid" style="max-height: 330px;" width="300" height="520" loading="lazy">
+        <p class="mt-3 fw-bold text-muted">¿Tienes otra pregunta?</p>
+        <a class="btn btn-contorno" href="contacto.html">Escríbenos</a>
+      </div>
+
+      <div class="col-lg-8">
+        <span class="etiqueta-seccion">
+          <i class="bi bi-question-circle-fill" aria-hidden="true"></i>Antes de preguntar
+        </span>
+        <h2 id="faq-titulo" class="titulo-seccion">Preguntas frecuentes</h2>
+
+        <div class="accordion shadow rounded-4 overflow-hidden mt-4" id="acordeonFaq">
+          <div class="accordion-item border-0">
+            <h3 class="accordion-header">
+              <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                <i class="bi bi-geo-alt-fill text-danger me-2" aria-hidden="true"></i>
+                ¿De dónde es la serie?
+              </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#acordeonFaq">
+              <div class="accordion-body text-muted">
+                Es una producción del estudio ruso <strong>Animaccord Animation Studio</strong>,
+                creada en 2009 y basada libremente en un cuento folclórico del mismo nombre.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                <i class="bi bi-collection-play-fill text-primary me-2" aria-hidden="true"></i>
+                ¿Cuántos episodios existen?
+              </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+              <div class="accordion-body text-muted">
+                La serie supera los <strong>200 episodios</strong> entre su temporada principal y
+                los spin-offs. En este sitio encontrarás una selección de los más conocidos.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                <i class="bi bi-trophy-fill text-warning me-2" aria-hidden="true"></i>
+                ¿Por qué es tan popular?
+              </button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+              <div class="accordion-body text-muted">
+                Por su <strong>humor visual</strong>: casi no necesita diálogo para entenderse.
+                Eso le permitió llegar a más de 25 idiomas y acumular miles de millones de vistas.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                <i class="bi bi-tv-fill text-success me-2" aria-hidden="true"></i>
+                ¿Dónde puedo verla?
+              </button>
+            </h3>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+              <div class="accordion-body text-muted">
+                En el canal oficial de YouTube <strong>Masha and the Bear</strong> y en plataformas
+                como Netflix o Amazon Prime Video, según el país.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                <i class="bi bi-database-fill text-info me-2" aria-hidden="true"></i>
+                ¿Este sitio guarda mis datos?
+              </button>
+            </h3>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+              <div class="accordion-body text-muted">
+                Solo si envías el formulario de contacto. Los mensajes y las valoraciones se
+                guardan en una base de datos <strong>PostgreSQL</strong> alojada en Neon.
+                No se usan para publicidad ni se comparten con terceros.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LLAMADO AL FORMULARIO
+============================================================= -->
+<section class="seccion" aria-labelledby="cta-titulo">
+  <div class="container">
+    <div class="banner-serie p-4 p-lg-5 revelar" style="background: linear-gradient(120deg, #8e24aa, #d81b60 60%, #f6a800);">
+      <div class="row align-items-center g-4">
+        <div class="col-7 col-lg-3 text-center">
+          <img src="assets/img/hero/oso-abrazo.webp" alt="El Oso abraza a Masha"
+               class="banner-img img-fluid" width="260" height="300" loading="lazy">
+        </div>
+        <div class="col-12 col-lg-9">
+          <h2 id="cta-titulo" class="display-6 fw-bold mb-2">¿Eres fan de verdad?</h2>
+          <p class="mb-4 opacity-90">
+            Cuéntanos quién es tu personaje favorito y qué te gustaría ver en el sitio.
+            Tu mensaje queda guardado en nuestra base de datos y lo leemos con cariño.
+          </p>
+          <a class="btn btn-miel btn-lg px-4" href="contacto.html">
+            <i class="bi bi-pencil-square me-2" aria-hidden="true"></i>Escribir un mensaje
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Visor de la vista previa de la galería -->
+<div class="modal fade" id="modalGaleria" tabindex="-1" aria-labelledby="tituloVisor" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content border-0 visor-fondo text-white overflow-hidden">
+      <div class="modal-header border-0">
+        <h2 class="modal-title fs-6" id="tituloVisor">Galería</h2>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar visor"></button>
+      </div>
+      <div class="modal-body text-center pt-0">
+        <img id="visorImagen" src="" alt="" class="visor-imagen">
+        <p id="visorTexto" class="text-white-50 mt-3 mb-0 small"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+<footer class="footer-masha pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img src="assets/img/marca/logo-m.webp" alt="Logotipo de Masha y el Oso" class="footer-marca" width="54" height="54">
+          <div>
+            <p class="mb-0 fw-bold text-white fs-5">Masha y el Oso</p>
+            <p class="mb-0 small text-white-50">Fan site educativo · Evidencia 21</p>
+          </div>
+        </div>
+        <p class="small mb-3">
+          Sitio sin ánimo de lucro creado como práctica del programa
+          <strong>Técnico en Programación de Software</strong> del SENA.
+          Masha y el Oso son marcas de sus respectivos titulares.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge rounded-pill text-bg-light">HTML5</span>
+          <span class="badge rounded-pill text-bg-light">CSS3</span>
+          <span class="badge rounded-pill text-bg-light">Bootstrap 5.3.8</span>
+          <span class="badge rounded-pill text-bg-light">JavaScript</span>
+          <span class="badge rounded-pill text-bg-light">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h2 class="mb-3">Navegación</h2>
+        <ul class="list-unstyled small mb-0">
+          <li class="mb-2"><a href="index.html">Inicio</a></li>
+          <li class="mb-2"><a href="personajes.html">Personajes</a></li>
+          <li class="mb-2"><a href="episodios.html">Episodios</a></li>
+          <li class="mb-2"><a href="galeria.html">Galería</a></li>
+          <li class="mb-2"><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h2 class="mb-3">El proyecto</h2>
+        <ul class="list-unstyled small mb-0">
+          <li class="mb-2"><a href="https://github.com/luis06-op/masha-ev21" rel="noopener noreferrer" target="_blank">Código en GitHub</a></li>
+          <li class="mb-2"><a href="https://vercel.com" rel="noopener noreferrer" target="_blank">Despliegue en Vercel</a></li>
+          <li class="mb-2"><a href="admin.html">Panel de mensajes</a></li>
+          <li class="mb-2"><a href="contacto.html#terminos">Términos y uso</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h2 class="mb-3">Sígueme el paso</h2>
+        <p class="small mb-3">
+          Un proyecto de <strong>Luis Ángel Muñoz Márquez</strong>,
+          ficha 3412544, instructor Farley González.
+        </p>
+        <div class="d-flex gap-2">
+          <a class="footer-social" href="https://github.com/luis06-op" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub del autor">
+            <i class="bi bi-github" aria-hidden="true"></i>
+          </a>
+          <a class="footer-social" href="https://www.youtube.com/@MashaandtheBear" target="_blank" rel="noopener noreferrer" aria-label="Canal oficial de Masha y el Oso en YouTube">
+            <i class="bi bi-youtube" aria-hidden="true"></i>
+          </a>
+          <a class="footer-social" href="contacto.html" aria-label="Ir al formulario de contacto">
+            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-light border-opacity-10 my-4">
+
+    <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small text-white-50">
+      <p class="mb-0">© <span data-anio>2026</span> Masha y el Oso · Fan site educativo. Sin afiliación oficial.</p>
+      <p class="mb-0">Evidencia 21 · Desarrollo de aplicativo Bootstrap · SENA</p>
+    </div>
+  </div>
+</footer>
+
+<button id="btnArriba" class="btn-arriba" type="button" aria-label="Volver al inicio de la página" title="Volver arriba">
+  <i class="bi bi-arrow-up-short fs-4" aria-hidden="true"></i>
+</button>
+
+<div id="contenedorAvisos" class="toast-container position-fixed bottom-0 end-0 p-3"
+     aria-live="polite" aria-atomic="true"></div>
+
+<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/componentes.js" defer></script>
+<script src="assets/js/inicio.js" defer></script>
+</body>
+</html>

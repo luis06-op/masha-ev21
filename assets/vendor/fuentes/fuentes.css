@@ -1,0 +1,15 @@
+/* Tipografías locales (subconjunto latin) — evita depender de Google Fonts en producción. */
+@font-face {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("./baloo-2.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url("./nunito-sans.woff2") format("woff2");
+}

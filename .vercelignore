@@ -1,0 +1,11 @@
+# Archivos que no se publican en Vercel (sí quedan en GitHub).
+database/
+scripts/
+docs/
+node_modules/
+.env
+.env.*
+.vercel/
+.git/
+.gitignore
+*.md
