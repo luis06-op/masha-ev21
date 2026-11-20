@@ -118,6 +118,25 @@ debajo de cada título. En producción: https://masha-ev21.vercel.app/
 > `https://masha-ev21.vercel.app/api/estadisticas`: se ve el JSON con los
 > conteos leídos directamente de PostgreSQL.
 
+### Capturas ya preparadas en `docs/capturas/`
+
+| Archivo | Contenido |
+|---|---|
+| `01-inicio.png` | Portada completa del sitio en producción. |
+| `02-personajes-modal.png` | Modal de detalle de Masha. |
+| `03-episodios-valoracion.png` | Modal de valoración con 4 estrellas seleccionadas. |
+| `04-galeria.png` | Galería completa con las 27 imágenes. |
+| `05-galeria-visor.png` | Visor ampliado de la galería. |
+| `06-contacto-formulario.png` | Formulario de contacto diligenciado. |
+| `07-contacto-confirmacion.png` | Modal de confirmación con el folio guardado en PostgreSQL. |
+| `08-admin-mensajes.png` | Panel con el mensaje recibido y el resumen. |
+| `09-github-repositorio.png` | Repositorio público en GitHub. |
+| `10-inicio-movil.png` | Portada en 390 × 844 (diseño responsivo). |
+
+> Puedes tomar tus propias capturas reemplazando estos archivos. El mensaje de
+> ejemplo del panel (`Sofía Ramírez`) quedó registrado para que la captura 8
+> muestre datos reales guardados en la base de datos.
+
 ---
 
 ## 6. Conclusiones
